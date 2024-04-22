@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
-@ComponentScan("web")
+@ComponentScan("mvc.hibernate")
 public class DataBaseConfig {
 
     Environment env;
