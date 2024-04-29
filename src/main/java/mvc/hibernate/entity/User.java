@@ -1,6 +1,9 @@
 package mvc.hibernate.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
@@ -11,12 +14,17 @@ public class User {
     private Long id;
 
     @Column
+    @NotEmpty
+    @Size(min = 2, max = 15)
     private String name;
 
     @Column
+    @NotEmpty
+    @Email
     private String email;
 
     @Column
+    @NotEmpty
     private String address;
 
     public User() {
